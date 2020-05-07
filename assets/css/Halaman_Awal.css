@@ -1,0 +1,16 @@
+    /* Cards */
+    .bg-login-image {
+      background-image: url(../img/kaleng.jpg);
+    }
+
+    img{
+      height: 150px;
+      width: 150px;
+      margin-bottom: 20px;
+      margin-top: -50px;
+    }
+
+    .tombol {
+      border-color: #1abc9c;
+      background-color: #1abc9c;
+    }
