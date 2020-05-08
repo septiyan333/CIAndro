@@ -7,7 +7,7 @@
         <div class="card-body p-0">
 
           <!-- Nested Row within Card Body -->
-          <div class="row" style="height: 550px">
+          <div class="row">
             <div class="col-lg-6 d-none d-lg-block bg-login-image" style="background-size: 120%; background-position-x: 0px; background-position-y: 0px;"></div>
             <div class="col-lg-6">
               <div class="p-5">

@@ -48,7 +48,7 @@ class Halaman_Awal extends CI_Controller
 
 				$data = [
 					'nama_pengguna' => $akun['nama_pengguna'],
-					'status_id' => $akun['status_id']
+					'status' => $akun['status']
 				];
 				$this->session->set_userdata($data);
 				redirect('Pengguna');
@@ -64,6 +64,15 @@ class Halaman_Awal extends CI_Controller
 			$this->session->set_flashdata('message', '<div class="alert alert-danger text-center" role="alert">Nama pengguna belum terdaftar!</div>');
 			redirect('Halaman_Awal');
 		}
+	}
+
+	public function keluar()
+	{
+		$this->session->unset_userdata('nama_pengguna');
+		$this->session->unset_userdata('status');
+
+		$this->session->set_flashdata('message', '<div class="alert alert-success text-center" role="alert">Anda telah keluar!</div>');
+		redirect('Halaman_Awal');
 	}
 
 	public function daftar()
@@ -115,7 +124,7 @@ class Halaman_Awal extends CI_Controller
 				'nama_pengguna' => $this->input->post('nama_pengguna'),
 				'kata_sandi' => $this->input->post('kata_sandi'),
 				'jenis_kelamin' => $this->input->post('jenis_kelamin'),
-				'status_id' => 3,
+				'status' => 'Pengguna',
 				'saldo' => 0,
 				'Image' => 'default.jpg'
 			];

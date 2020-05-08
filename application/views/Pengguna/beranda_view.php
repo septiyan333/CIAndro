@@ -18,14 +18,15 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
     <!-- Custom fonts for this template-->
-    <link href="<?php echo base_url('assets/vendor/fontawesome-free/css/all.min.css') ?>" rel="stylesheet" type="text/css">
+    <link href="<?php echo base_url('assets/vendor/fontawesome-free/css/all.min.css'); ?>" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
-    <!-- My CSS -->
-    <link rel="stylesheet" href="<?php echo base_url('assets/css/beranda_view.css') ?>">
-
     <!-- Theme CSS -->
-    <link href="<?php echo base_url('assets/css/freelancer.min.css') ?>" rel="stylesheet">
+    <link href="<?php echo base_url('assets/css/freelancer.min.css'); ?>" rel="stylesheet">
+
+    <!-- My CSS -->
+    <link rel="stylesheet" href="<?php echo base_url('assets/css/beranda_view.css'); ?>">
+
   </head>
 
   <body>
@@ -33,7 +34,7 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light">
       <div class="container">
-        <a class="navbar-brand" href="#">Selamat Datang,&nbsp&nbspNama!</a>
+        <a class="navbar-brand" href="#"><?php echo 'Selamat datang, ' . $akun['nama_lengkap']; ?></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -42,7 +43,7 @@
             <a class="nav-item nav-link js-scroll-trigger" href="#portfolio">Edukasi</a>
             <a class="nav-item nav-link js-scroll-trigger" href="#about">Tentang</a>
             <a class="nav-item btn btn-primary btn-nav" href="#">Akun Saya</a>
-            <a class="nav-item btn btn-warning btn-nav" href="#">Keluar</a>
+            <a class="nav-item btn btn-warning btn-nav" href="<?php echo ('Halaman_Awal/keluar'); ?>">Keluar</a>
           </div>
         </div>
       </div>
@@ -549,18 +550,18 @@
     </div>
 
     <!-- Bootstrap core JavaScript -->
-    <script src="<?php echo base_url('assets/vendor/jquery/jquery.min.js') ?>"></script>
-    <script src="<?php echo base_url('assets/vendor/bootstrap/js/bootstrap.bundle.min.js') ?>"></script>
+    <script src="<?php echo base_url('assets/vendor/jquery/jquery.min.js'); ?>"></script>
+    <script src="<?php echo base_url('assets/vendor/bootstrap/js/bootstrap.bundle.min.js'); ?>"></script>
 
     <!-- Core Plugin JavaScript -->
-    <script src="<?php echo base_url('assets/vendor/jquery-easing/jquery.easing.min.js') ?>"></script>
+    <script src="<?php echo base_url('assets/vendor/jquery-easing/jquery.easing.min.js'); ?>"></script>
 
     <!-- Contact Form JavaScript -->
-    <script src="<?php echo base_url('assets/js/jqBootstrapValidation.js') ?>"></script>
-    <script src="<?php echo base_url('assets/js/contact_me.js') ?>"></script>
+    <script src="<?php echo base_url('assets/js/jqBootstrapValidation.js'); ?>"></script>
+    <script src="<?php echo base_url('assets/js/contact_me.js'); ?>"></script>
 
     <!-- Custom scripts for this template -->
-    <script src="<?php echo base_url('assets/js/freelancer.min.js') ?>"></script>
+    <script src="<?php echo base_url('assets/js/freelancer.min.js'); ?>"></script>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

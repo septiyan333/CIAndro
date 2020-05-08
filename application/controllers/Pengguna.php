@@ -5,6 +5,8 @@ class Pengguna extends CI_Controller
 {
     public function index()
     {
-        $this->load->view('Pengguna/beranda_view');
+        $data['akun'] = $this->db->get_where('tb_akun', ['nama_pengguna' => $this->session->userdata('nama_pengguna')])->row_array();
+
+        $this->load->view('Pengguna/beranda_view', $data);
     }
 }
