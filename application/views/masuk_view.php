@@ -21,11 +21,11 @@
                 <form class="user" method="post" action="<?php echo base_url('Halaman_Awal'); ?>">
                   <div class="form-group">
                     <input type="text" class="form-control form-control" id="nama_pengguna" name="nama_pengguna" placeholder="Nama Pengguna" value="<?php echo set_value('nama_pengguna') ?>">
-                    <?php echo form_error('nama_pengguna', '<br><small class="text-danger">', '</small>'); ?>
+                    <?php echo form_error('nama_pengguna', '<small class="text-danger pl-1">', '</small>'); ?>
                   </div>
                   <div class="form-group">
                     <input type="password" class="form-control form-control" id="kata_sandi" name="kata_sandi" placeholder="Kata Sandi">
-                    <?php echo form_error('kata_sandi', '<br><small class="text-danger">', '</small>'); ?>
+                    <?php echo form_error('kata_sandi', '<small class="text-danger pl-1">', '</small>'); ?>
                   </div>
                   <Button type="submit" class="btn btn-primary btn-block tombol">
                     Masuk

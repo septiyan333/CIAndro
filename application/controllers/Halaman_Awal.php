@@ -12,12 +12,12 @@ class Halaman_Awal extends CI_Controller
 	public function index()
 	{
 		// Rules Nama Pengguna
-		$this->form_validation->set_rules('nama_pengguna', 'Nama Pengguna', 'trim|required', ['nama_pengguna' => 'Nama Pengguna harus diisi!']);
+		$this->form_validation->set_rules('nama_pengguna', 'Nama Pengguna', 'trim|required', ['required' => 'Nama Pengguna harus diisi!']);
 		// Rules Kata Sandi
-		$this->form_validation->set_rules('kata_sandi', 'Kata Sandi', 'trim|required', ['kata_sandi' => 'Kata Sandi harus diisi!']);
+		$this->form_validation->set_rules('kata_sandi', 'Kata Sandi', 'trim|required', ['required' => 'Kata Sandi harus diisi!']);
 
 		// Validasi
-		// Jika Validasi gagal akan kembalii pada form daftar
+		// Jika Validasi gagal akan kembalii pada form masuk
 		if ($this->form_validation->run() == False) {
 			$data['judul'] = 'HI Trash - Masuk';
 			$this->load->view('templates/Halaman_awal_header', $data);
@@ -38,20 +38,24 @@ class Halaman_Awal extends CI_Controller
 		$akun = $this->db->get_where('tb_akun', ['nama_pengguna' => $nama_pengguna])->row_array();
 		$sandi = $this->db->get_where('tb_akun', ['kata_sandi' => $kata_sandi])->row_array();
 
-
 		// Jika akun ada
 		if ($akun) {
-
 			// Cek kata sandi
 			// Kata Sandi benar
 			if ($sandi) {
-
 				$data = [
 					'nama_pengguna' => $akun['nama_pengguna'],
 					'status' => $akun['status']
 				];
 				$this->session->set_userdata($data);
-				redirect('Pengguna');
+
+				if ($data['status'] == 'Pengguna') {
+					redirect('Pengguna');
+				} else if ($data['status'] == 'Admin') {
+					redirect('Admin');
+				} else if ($data['status'] == 'Kurir') {
+					redirect('Kurir');
+				}
 			}
 			// Kata sandi salah
 			else {
@@ -132,5 +136,10 @@ class Halaman_Awal extends CI_Controller
 			$this->session->set_flashdata('message', '<div class="alert alert-success text-center" role="alert">Pendaftaran Berhasil ! silahkan masuk</div>');
 			redirect('Halaman_Awal');
 		}
+	}
+
+	public function blocked()
+	{
+		$this->load->view('blocked_view');
 	}
 }
