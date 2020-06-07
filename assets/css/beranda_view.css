@@ -2,7 +2,11 @@
 /* Navbar */
 .navbar {
   position: relative;
-  z-index: 1;
+  z-index: 2;
+}
+
+.btnakun {
+  color: black;
 }
 
 /* Jumbotron */
@@ -94,7 +98,7 @@
       margin-right: 25px;
     }
 
-    .nav-link:hover::after {
+    .borderbawah:hover::after {
       content: '';
       display: block;
       border-bottom: 3px solid #6F97AA;
@@ -108,13 +112,17 @@
       text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
     }
 
+    .btn-akun {
+      color: white;
+    }
+
     /* Jumbotron */
     .jumbotron {
       margin-top: -75px;
       height: 470px;
       background-position-y: -100px;
     }
-
+    
     .logo {
       width: 200px;
     }
@@ -140,11 +148,6 @@
     }
 
     .info-panel span {
-      font-size: 14px;
-    }
-
-    .rewel {
-      color: white; 
       font-size: 14px;
     }
   }

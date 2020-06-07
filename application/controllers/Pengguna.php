@@ -20,6 +20,18 @@ class Pengguna extends CI_Controller
     public function index()
     {
         $data['akun'] = $this->db->get_where('tb_akun', ['nama_pengguna' => $this->session->userdata('nama_pengguna')])->row_array();
-        $this->load->view('Pengguna/jadwal_view', $data);
+        $this->load->view('ViewPengguna/beranda_pengguna', $data);
+    }
+
+    public function jadwal()
+    {
+
+        $this->load->view('ViewPengguna/jadwal_pengguna');
+    }
+
+    public function profil()
+    {
+        $data['akun'] = $this->db->get_where('tb_akun', ['nama_pengguna' => $this->session->userdata('nama_pengguna')])->row_array();
+        $this->load->view('ViewPengguna/profil_pengguna', $data);
     }
 }

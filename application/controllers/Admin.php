@@ -21,6 +21,6 @@ class Admin extends CI_Controller
     {
         $data['akun'] = $this->db->get_where('tb_akun', ['nama_pengguna' => $this->session->userdata('nama_pengguna')])->row_array();
 
-        $this->load->view('Admin/beranda_admin', $data);
+        $this->load->view('ViewAdmin/beranda_admin', $data);
     }
 }
