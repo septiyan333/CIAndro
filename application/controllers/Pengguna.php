@@ -29,6 +29,11 @@ class Pengguna extends CI_Controller
         $this->load->view('ViewPengguna/jadwal_pengguna');
     }
 
+    public function riwayat()
+    {
+        $this->load->view('ViewPengguna/riwayat_pengguna');
+    }
+
     public function profil()
     {
         $data['akun'] = $this->db->get_where('tb_akun', ['nama_pengguna' => $this->session->userdata('nama_pengguna')])->row_array();

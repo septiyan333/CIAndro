@@ -88,7 +88,7 @@
 
             <div class="col-lg">
               <img src="<?php echo base_url('assets/img/icons/employee, account, business, time, clock_120px.png') ?>" alt="riwayat">
-              <a class="nav-item btn btn-primary" href="#"><span>Riwayat</span></a>
+              <a class="nav-item btn btn-primary" href="<?php echo base_url('Pengguna/riwayat');?>"><span>Riwayat</span></a>
             </div>
           </div>
         </div>
