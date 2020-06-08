@@ -43,7 +43,7 @@
               </button>
               <div class="dropdown-menu">
                 <a class="dropdown-item" href="<?php echo base_url('Pengguna/profil'); ?>">Profil</a>
-                <a class="dropdown-item" href="#">Tukar Poin</a>
+                <a class="dropdown-item" href="<?php echo base_url('Pengguna/poin'); ?>">Tukar Poin</a>
                 <a class="dropdown-item" href="#">Pengaturan</a>
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="<?php echo base_url('Halaman_Awal/keluar'); ?>">Keluar</a>
@@ -73,12 +73,12 @@
           <div class="row isi">
             <div class="col-lg">
               <img src="<?php echo base_url('assets/img/icons/garbage, truck, transportation, transport, vehicle_120px.png') ?>" alt="penjemputan">
-              <a class="nav-item btn btn-primary" href="#"><span>Penjemputan</span></a>
+              <a class="nav-item btn btn-primary" href="<?php echo base_url('Pengguna/penjemputan'); ?>"><span>Penjemputan</span></a>
             </div>
 
             <div class="col-lg">
               <img src="<?php echo base_url('assets/img/icons/bank, finance, dollar, location, pointer_120px.png') ?>" alt="Poin">
-              <a class="nav-item btn btn-primary" href="#"><span>Poin</span></a>
+              <a class="nav-item btn btn-primary" href="<?php echo base_url('Pengguna/poin'); ?>"><span>Poin</span></a>
             </div>
 
             <div class="col-lg">

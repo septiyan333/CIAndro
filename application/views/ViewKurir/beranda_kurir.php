@@ -72,17 +72,17 @@
 
                     <div class="col-lg">
                         <img src="<?php echo base_url('assets/img/icons/bank, finance, dollar, location, pointer_120px.png') ?>" alt="Poin">
-                        <a class="nav-item btn btn-primary" href="#"><span>Poin</span></a>
+                        <a class="nav-item btn btn-primary" href="<?php echo base_url('Kurir/poin'); ?>"><span>Poin</span></a>
                     </div>
 
                     <div class="col-lg">
                         <img src="<?php echo base_url('assets/img/icons/bookmark, schedule, date, appointment_120px.png') ?>" alt="Jadwal">
-                        <a class="nav-item btn btn-primary" href="#"><span>Jadwal</span></a>
+                        <a class="nav-item btn btn-primary" href="<?php echo base_url('Kurir/jadwal'); ?>"><span>Jadwal</span></a>
                     </div>
 
                     <div class="col-lg">
                         <img src="<?php echo base_url('assets/img/icons/employee, account, business, time, clock_120px.png') ?>" alt="riwayat">
-                        <a class="nav-item btn btn-primary" href="#"><span>Riwayat</span></a>
+                        <a class="nav-item btn btn-primary" href="<?php echo base_url('Kurir/riwayat'); ?>"><span>Riwayat</span></a>
                     </div>
                 </div>
             </div>
