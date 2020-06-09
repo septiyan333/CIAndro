@@ -37,161 +37,65 @@
     <!-- Akhir Navbar -->
 
     <!-- FORM -->
-    <form action="proses_penjemputan.php" method="POST">
-    <!-- Alamat -->
-      <div style="color:#3A3A3A; background-color:#f3f3f3; height:30px; align:center">
-        <h5> <center> Alamat</center></h5>
-      </div>
-      <div class="form" method="post">
-      <table style="margin-left:60px">
-        <div class="form-group"> 
-          <?php echo 'Alamat, ' . $akun['alamat']; ?>
-        <div class="form-group">
-          <tr>
-            <td width="150px"> <input type="hidden" value="<?php echo $data['id_akun']; ?>" for="id_akun" name="id_akun">ID : </input></td>
-            <td> <h5><?php echo $data['id_akun']; ?></h5> </td>
-          </tr>
+    <div class="container" style="margin-top: 80px">
+        <div class="col-md-12">
+            <?php echo form_open('Pengguna/simpan') ?>
+
+              <div class="form-group">
+                <label for="text">ID Akun</label>
+                <input type="text" name="id_akun" class="form-control" placeholder="">
+              </div>
+
+              <div class="form-group">
+                <label for="text">Nama Lengkap</label>
+                <input type="date" name="nama_lengkap" class="form-control" placeholder="">
+              </div>
+
+              <div class="form-group">
+                <label for="text">Tanggal</label>
+                <input type="text" name="tanggal" class="form-control" >
+              </div>
+
+              <div class="form-group">
+                <label for="text">Waktu</label>
+                <input type="text" name="Waktu" class="form-control" >
+              </div>
+
+              <div class="form-group">
+                <label for="text">Jenis Sampah</label>
+                <input type="text" name="jenis_sampah" class="form-control" >
+              </div>
+
+              <div class="form-group">
+                <label for="text">Berat</label>
+                <input type="text" name="berat" class="form-control" placeholder="Masukan Berat Sampah">
+              </div>
+
+              <div class="form-group">
+                <label for="text">Saldo</label>
+                <input type="text" name="saldo" class="form-control" placeholder="Masukan Saldo">
+              </div>
+
+              <div class="form-group">
+                <label for="text">No Telpon</label>
+                <input type="text" name="no_telfon" class="form-control" >
+              </div>
+
+              <div class="form-group">
+                <label for="text">Alamat</label>
+                <input type="text" name="pengarang" class="form-control" >
+              </div>
+
+              <div class="form-group">
+                <label for="text">Detail</label>
+                <input type="text" name="pengarang" class="form-control" placeholder="Masukan Detail Rumah Anda">
+              </div>
+
+              <button type="submit" class="btn btn-md btn-success">Simpan</button>
+              <button type="reset" class="btn btn-md btn-warning">reset</button>
+            <?php echo form_close() ?>
         </div>
-        
-        <div class="form-group">
-          <tr>
-            <td> <input type="hidden" value="<?php echo $data['nama_lengkap']; ?>" for="nama_lengkap" name="nama_lengkap">Nama : </input></td>
-            <td> <h5><?php echo $data['nama_lengkap']; ?></h5> </td>
-          </tr>
-        </div>
-
-        </div>
-        <div class="form-group">
-          <tr>
-            <td><input type="hidden" value="<?php echo $data['alamat']; ?>" for="alamat" name="alamat">Alamat : </input></td>
-            <td> <h5> <?php echo $data['alamat']; ?> </h5> </td>
-          </tr>
-        </div>  
-
-        <div class="form-group">
-          <tr>
-            <td><input type="hidden" value="<?php echo $data['no_telpon']; ?>" for="no_telpon" name="no_telpon">No Telpon : </input></td>
-            <td> <h5> <?php echo $data['no_telpon']; ?> </h5> </td>
-          </tr>
-        </div>
-
-        <div class="form-group">
-          <tr>
-            <td>
-              <label for="detail_alamat" style="top:1px">Detail Alamat :</label>
-            </td>
-            <td width="300">
-              <textarea class="form-control" placeholder="Tulis detail alamat anda (ex. nomor, ciri-ciri, dll)" id="detail" name="detail" rows="4" style="margin-top:10px"></textarea>
-            </td>
-          </tr>
-        </div>        
-      </table>
-      </div>
-      <br>
-      <!-- Akhir Alamat -->
-
-      <!-- Jenis Sampah -->
-      <div style="color:#3A3A3A; background-color:#f3f3f3; height:30px; align:center">
-        <h5> <center>Jenis Sampah</center></h5>
-      </div>
-      
-      <div class="row">
-        <div class="col-sm-3" Style="margin-left: 20px; margin-top: 20px;"> 
-          <span Style="font-size:30px; font-family:Calibri; font-style:bold;">Pilih Jenis Sampah</span>   
-        </div>
-      </div>
-      <br>
-      
-      <div class="row"> 
-        <div class="col-sm" Style="text-align:center;">
-          <span Style="font-size:30px; font-family:Calibri; font-style:regular;">Sampah Organik</span>
-        </div>
-
-        <div class="col-sm" Style="text-align:center;">
-          <span Style="font-size:30px; font-family:Calibri; font-style:regular;">Sampah Non Organik</span>
-        </div>
-      </div> <br>
-
-      <div class="row"> 
-        <div class="col-sm" Style="margin-left:230px;">
-          <label Style="font-size:20px;">
-            <input type="checkbox" name="sayuran" value="Sayuran" height="10px" widht="10px"/> Sayuran
-          </label> <br>
-
-          <label Style="font-size:20px;">
-            <input type="checkbox" name="Buah-buahan" value="Buah-buahan"/> Buah-buahan
-          </label> <br>
-
-          <label Style="font-size:20px;">
-            <input type="checkbox" name="Minyak" value=" Minyak"/> Minyak
-          </label> <br>
-
-          <label Style="font-size:20px;">
-            <input type="checkbox" name="Nasi" value="Nasi"/> Nasi
-          </label> <br>
-
-          <label Style="font-size:20px;">
-            <input type="checkbox" name="Makanan" value="Makanan"/> Makanan
-          </label>
-        </div>
-        
-        <div class="garis_verikal" Style="border-left: 1px #f3f3f3 solid; height: 200px;"></div>
-
-        <div class="col-sm" Style="margin-left:220px;">
-          <label Style="font-size:20px;">
-            <input type="checkbox" name="Plastik" value="Plastik" height="10px" widht="10px"/> Plastik
-          </label> <br>
-
-          <label Style="font-size:20px;">
-            <input type="checkbox" name="Kardus" value="Kardus"/> Kardus
-          </label> <br>
-
-          <label Style="font-size:20px;">
-            <input type="checkbox" name="Kertas" value=" Kertas"/> Kertas
-          </label> <br>
-
-          <label Style="font-size:20px;">
-            <input type="checkbox" name="Kaleng" value=" Kaleng"/> Kaleng
-          </label> <br>
-
-          <label Style="font-size:20px;">
-            <input type="checkbox" name="Kain" value="Kain"/> Kain
-          </label>
-        </div>
-      </div> <br>
-      <!-- Akhir Jenis Sampah -->
-      
-      <!-- Jadwal Penjemputan -->
-      <div style="color:#3A3A3A; background-color:#f3f3f3; height:30px; align:center">
-        <h5> <center>Jadwal Penjemputan</center></h5>
-      </div>
-          
-      <div class="row" style="margin-top:50px;">
-        <div class="col-sm-1">
-          <img src="img/date_range-24px.svg" alt="IconTanggal" width="40px" height="40px" style="float:right">
-        </div>
-        <div class="col-sm">
-          <input class="form-control input-sm" type="date" name="tanggal" Style="width:200px; text-align:center">
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-sm-1">
-          <img src="img/access_time-24px.svg" alt="IconTanggal" width="40px" height="40px" style="float:right">
-        </div>
-        <div class="col-sm-3">
-          <input type="time" name="waktu" id="waktu_mulai_masuk"  class="form-control" onkeyup="Waktumasuk();" style="width:100px; text-align:center">
-        </div>
-      </div><br>
-      <!-- Akhir Jadwal Penjemputan -->
-          <?php } ?>      
-      <!-- SELESAI -->
-      <div class="row">
-        <div class="col-sm" style="text-align:center">
-          <input type="submit" value="selesai" class="btn btn-success selesai">&nbsp &nbsp</input>
-        </div>
-      </div> 
-    </form>
+    </div>
     <!-- Akhir Form -->
     <br>
     <!-- Optional JavaScript -->

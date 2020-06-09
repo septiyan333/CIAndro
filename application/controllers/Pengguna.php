@@ -26,7 +26,35 @@ class Pengguna extends CI_Controller
     {
         $this->load->view('ViewPengguna/penjemputan');
     }
-    
+
+    public function simpan()
+    {
+        $data = array(
+
+            'id_transaksi'    => $this->input->post("id_transaksi"),
+            'id_akun'         => $this->input->post("id_akun"),
+            'nama_lengkap'    => $this->input->post("nama_lengkap"),
+            'tanggal'         => $this->input->post("tanggal"),
+            'waktu'           => $this->input->post("waktu"),
+            'jenis_sampah'    => $this->input->post("jenis_sampah"),
+            'berat'           => $this->input->post("berat"),
+            'saldo'           => $this->input->post("saldo"),
+            'no_telpon'       => $this->input->post("no_telpon"),
+            'alamat'          => $this->input->post("alamat"),
+            'detail'          => $this->input->post("detail"),
+        );
+
+        $this->model_transaksi->simpan($data);
+
+        $this->session->set_flashdata('notif', '<div class="alert alert-success alert-dismissible"> Success! data berhasil disimpan didatabase.
+                                                </div>');
+
+        //redirect
+        redirect('buku/');
+
+    }
+
+        
     public function jadwal()
     {
 
