@@ -24,6 +24,7 @@ class Pengguna extends CI_Controller
     }
     public function penjemputan()
     {
+        
         $this->load->view('ViewPengguna/penjemputan');
     }
 
