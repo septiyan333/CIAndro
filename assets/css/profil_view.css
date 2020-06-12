@@ -1,0 +1,77 @@
+
+    .txtputih {
+        color: white !important;
+       }
+   
+       /* Panel Poin */
+       .card {
+           background-color: white;
+           box-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
+           border-radius: 10px;
+           width: 350px;
+       }
+       .card span {
+           font-family: 'Segoe UI';
+           font-size: 18px;
+       }
+       .card img {
+           width: 22px;
+           height: 22px;
+       }
+   
+       .panelpoin{
+           margin-top: 30px;
+       }
+   
+       .posisicard {
+           margin: auto;
+       }
+   
+       /* Form */
+   
+       .hinama {
+           font-size: 30px;
+           font-family: sans-serif;
+           
+       }
+
+       /* Profil */
+       .profil{
+           margin-top: 20px;
+           text-align: center;
+       }
+
+       .pilihfoto {
+        padding-left: 45px; 
+        padding-right: 15px;
+    }
+
+    .idt {
+        font-family: sans-serif;
+    }
+       
+       @media (min-width: 992px) {
+           /* Panel Poin */
+           .posisicard{
+               float: right;
+               right: -25px;
+            }
+            
+            /* Profil */
+            .profil {
+                margin-top: 0px;
+            }
+
+            .pilihfoto {
+                padding-left: 45px; 
+                padding-right: 15px;
+            }
+       }
+   
+       
+   
+   
+   
+   
+   
+   

@@ -130,7 +130,7 @@ class Halaman_Awal extends CI_Controller
 				'jenis_kelamin' => $this->input->post('jenis_kelamin'),
 				'status' => 'Pengguna',
 				'saldo' => 0,
-				'Image' => 'default.jpg'
+				'image' => 'default.png'
 			];
 			$this->db->insert('tb_akun', $data);
 			$this->session->set_flashdata('message', '<div class="alert alert-success text-center" role="alert">Pendaftaran Berhasil ! silahkan masuk</div>');

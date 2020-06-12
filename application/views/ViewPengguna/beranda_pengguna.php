@@ -38,8 +38,7 @@
             <!-- Navigasi Akun -->
             <div class="btn-group">
               <button type="button" class="btn dropdown-toggle btn-akun" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <img src="<?= base_url('assets/img/profile/default.png') ?>" alt="profil" class="img-circle" width="30px">
-                <?= $akun['nama_pengguna']; ?>
+                <img src="<?= base_url('assets/img/profile/') . $akun['image'] ?>" alt="profil" class="img-profile rounded-circle" width="30px" height="30px">&nbsp <?= $akun['nama_pengguna']; ?>
               </button>
               <div class="dropdown-menu">
                 <a class="dropdown-item" href="<?php echo base_url('Pengguna/profil'); ?>">Profil</a>
@@ -88,7 +87,7 @@
 
             <div class="col-lg">
               <img src="<?php echo base_url('assets/img/icons/employee, account, business, time, clock_120px.png') ?>" alt="riwayat">
-              <a class="nav-item btn btn-primary" href="<?php echo base_url('Pengguna/riwayat');?>"><span>Riwayat</span></a>
+              <a class="nav-item btn btn-primary" href="<?php echo base_url('Pengguna/riwayat'); ?>"><span>Riwayat</span></a>
             </div>
           </div>
         </div>
