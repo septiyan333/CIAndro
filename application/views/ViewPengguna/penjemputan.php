@@ -29,7 +29,7 @@
             <a class="nav-item nav-link active" href="halaman_pengguna.php">Beranda<span class="sr-only">(current)</span></a> 
             <a class="nav-item btn btn-primary" href="profil.php">Akun Saya</a>
             <a class="nav-item nav-link" href="#"></a>
-            <a href="<?php echo base_url('Pengguna'); ?>" class="btn btn-warning" role="button"><small>Kembali</small></a>
+            <a href="halaman_pengguna.php" class="btn btn-warning" role="button"><small>Kembali</small></a>
           </div>
         </div>
       </div>
@@ -49,7 +49,6 @@
               <div class="form-group">
                 <label for="text">Nama Lengkap</label>
                 <input type="date" name="nama_lengkap" class="form-control" placeholder="">
-
               </div>
 
               <div class="form-group">

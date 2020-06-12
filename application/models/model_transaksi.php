@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class model_transaksi extends CI_model{
+class Model_transaksi extends CI_model{
 
     public function get_all()
     {
