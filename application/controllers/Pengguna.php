@@ -27,8 +27,8 @@ class Pengguna extends CI_Controller
     // ------------- Penjemputan ------------- 
     public function penjemputan()
     {
-        
-        $this->load->view('ViewPengguna/penjemputan');
+        $data['akun'] = $this->db->get_where('tb_akun', ['nama_pengguna' => $this->session->userdata('nama_pengguna')])->row_array();
+        $this->load->view('ViewPengguna/penjemputan', $data);
     }
 
     public function simpan()
@@ -56,23 +56,31 @@ class Pengguna extends CI_Controller
         redirect('buku/');
     }
 
+    // ------------- Poin ------------- 
+    public function poin()
+    {
+        $data['akun'] = $this->db->get_where('tb_akun', ['nama_pengguna' => $this->session->userdata('nama_pengguna')])->row_array();
+        $this->load->view('ViewPengguna/poin', $data);
+    }
+
+    public function tukar_poin()
+    {
+        $data['akun'] = $this->db->get_where('tb_akun', ['nama_pengguna' => $this->session->userdata('nama_pengguna')])->row_array();
+        $this->load->view('ViewPengguna/tukarpoin', $data);
+    }
+
     // ------------- Jadwal ------------- 
     public function jadwal()
     {
-
-        $this->load->view('ViewPengguna/jadwal_pengguna');
+        $data['akun'] = $this->db->get_where('tb_akun', ['nama_pengguna' => $this->session->userdata('nama_pengguna')])->row_array();
+        $this->load->view('ViewPengguna/jadwal_pengguna', $data);
     }
 
     // ------------- Riwayat ------------- 
     public function riwayat()
     {
-        $this->load->view('ViewPengguna/riwayat_pengguna');
-    }
-
-    // ------------- Poin ------------- 
-    public function poin()
-    {
-        $this->load->view('ViewPengguna/poin');
+        $data['akun'] = $this->db->get_where('tb_akun', ['nama_pengguna' => $this->session->userdata('nama_pengguna')])->row_array();
+        $this->load->view('ViewPengguna/riwayat_pengguna', $data);
     }
 
     // ------------- Profil ------------- 
@@ -137,15 +145,6 @@ class Pengguna extends CI_Controller
                     redirect('Pengguna/ubah_profil');
                 }
             }
-            // $array = array(
-            //     'nama_lengkap' => $nama_lengkap,
-            //     'alamat' => $alamat,
-            //     'email' => $email,
-            //     'no_telpon' => $no_telpon,
-            //     'Image' => $new_image
-            // );
-            // $this->db->set($array);
-
             $this->db->set('nama_lengkap', $nama_lengkap);
             $this->db->set('alamat', $alamat);
             $this->db->set('email', $email);

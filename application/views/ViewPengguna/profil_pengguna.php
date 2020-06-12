@@ -15,7 +15,7 @@
             </button>
             <div class="dropdown-menu">
               <a class="dropdown-item" href="<?php echo base_url('Pengguna/profil'); ?>">Profil</a>
-              <a class="dropdown-item" href="#">Tukar Poin</a>
+              <a class="dropdown-item" href="<?= base_url('Pengguna/tukar_poin'); ?>">Tukar Poin</a>
               <a class="dropdown-item" href="#">Pengaturan</a>
               <div class="dropdown-divider"></div>
               <a class="dropdown-item" href="<?php echo base_url('Halaman_Awal/keluar'); ?>">Keluar</a>
@@ -27,11 +27,6 @@
     </div>
   </nav>
   <!-- Akhir Navbar -->
-
-
-  <!-- Panel Poin Fix -->
-
-  <!-- Akhir Panel Poin Fix -->
 
   <!-- Panel Poin -->
   <div class="container panelpoin">
@@ -52,7 +47,7 @@
               <php echo $data['saldo'] ?> TP -->
             </span>
             <hr>
-            <a href="#" class="card-link"> <img src="<?php echo base_url('assets/img/icons/ic_money.png'); ?>" alt="icon-tukar-poin"> Tukar Poin</a>
+            <a href="<?= base_url('Pengguna/tukar_poin'); ?>" class="card-link"> <img src="<?php echo base_url('assets/img/icons/ic_money.png'); ?>" alt="icon-tukar-poin"> Tukar Poin</a>
             <a href="<?php echo base_url('Pengguna/poin'); ?>" class="float-right">Lihat Riwayat Poin</a>
           </div>
         </div>

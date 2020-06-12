@@ -15,7 +15,7 @@
             </button>
             <div class="dropdown-menu">
               <a class="dropdown-item" href="<?php echo base_url('Pengguna/profil'); ?>">Profil</a>
-              <a class="dropdown-item" href="#">Tukar Poin</a>
+              <a class="dropdown-item" href="<?= base_url('Pengguna/tukar_poin'); ?>">Tukar Poin</a>
               <a class="dropdown-item" href="#">Pengaturan</a>
               <div class="dropdown-divider"></div>
               <a class="dropdown-item" href="<?php echo base_url('Halaman_Awal/keluar'); ?>">Keluar</a>
