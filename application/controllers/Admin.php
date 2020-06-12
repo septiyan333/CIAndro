@@ -23,4 +23,45 @@ class Admin extends CI_Controller
 
         $this->load->view('ViewAdmin/beranda_admin', $data);
     }
+
+    public function tabletransaksi()
+    {
+
+        $this->load->view('ViewAdmin/table_transaksi');
+    }
+
+    public function tableriwayat()
+    {
+        $this->load->view('ViewAdmin/table_riwayat');
+    }
+
+    public function transaksipoin()
+    {
+        $this->load->view('ViewAdmin/transaksi_poin');
+    }
+
+    public function riwayattransaksi()
+    {
+        $this->load->view('ViewAdmin/riwayat_transaksi');
+    }
+
+    public function inputjadwal()
+    {
+        $this->load->view('ViewAdmin/input_jadwal');
+    }
+
+    public function tablejadwal()
+    {
+        $this->load->view('ViewAdmin/table_jadwal');
+    }
+
+    public function inputakun()
+    {
+        $this->load->view('ViewAdmin/input_akun');
+    }
+
+    public function tableakun()
+    {
+        $this->load->view('ViewAdmin/table_akun');
+    }
 }
