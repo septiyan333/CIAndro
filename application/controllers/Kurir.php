@@ -17,25 +17,48 @@ class Kurir extends CI_Controller
         }
     }
 
-     public function jadwal()
-    {
-
-        $this->load->view('ViewKurir/jadwal_kurir');
-    }
-
-    public function riwayat()
-    {
-        $this->load->view('ViewKurir/riwayat_kurir');
-    }
-
-    public function poin()
-    {
-        $this->load->view('ViewKurir/poin');
-    }
-    
+    // ----------- Beranda -----------
     public function index()
     {
         $data['akun'] = $this->db->get_where('tb_akun', ['nama_pengguna' => $this->session->userdata('nama_pengguna')])->row_array();
         $this->load->view('ViewKurir/beranda_kurir', $data);
+    }
+
+    // ----------- Poin -----------
+    public function poin()
+    {
+        $data['akun'] = $this->db->get_where('tb_akun', ['nama_pengguna' => $this->session->userdata('nama_pengguna')])->row_array();
+        $this->load->view('ViewKurir/poin', $data);
+    }
+
+    public function tukar_poin()
+    {
+        $data['akun'] = $this->db->get_where('tb_akun', ['nama_pengguna' => $this->session->userdata('nama_pengguna')])->row_array();
+        $this->load->view('ViewKurir/tukarpoin_kurir', $data);
+    }
+
+    // ----------- Jadwal -----------
+    public function jadwal()
+    {
+        $data['akun'] = $this->db->get_where('tb_akun', ['nama_pengguna' => $this->session->userdata('nama_pengguna')])->row_array();
+        $this->load->view('ViewKurir/jadwal_kurir', $data);
+    }
+
+    // ----------- Riwayat -----------
+    public function riwayat()
+    {
+        $data['akun'] = $this->db->get_where('tb_akun', ['nama_pengguna' => $this->session->userdata('nama_pengguna')])->row_array();
+        $this->load->view('ViewKurir/riwayat_kurir', $data);
+    }
+
+    // ------------- Profil ------------- 
+    public function profil()
+    {
+        $data['akun'] = $this->db->get_where('tb_akun', ['nama_pengguna' => $this->session->userdata('nama_pengguna')])->row_array();
+        $data['judul'] = 'Kurir - Profil';
+
+        $this->load->view('templates/profil_header', $data);
+        $this->load->view('ViewKurir/profil_kurir', $data);
+        $this->load->view('templates/profil_footer', $data);
     }
 }
