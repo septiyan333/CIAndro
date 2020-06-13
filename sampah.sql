@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.0.1
+-- version 4.8.5
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 08, 2020 at 07:28 AM
--- Server version: 10.4.6-MariaDB
--- PHP Version: 7.3.9
+-- Waktu pembuatan: 13 Jun 2020 pada 17.54
+-- Versi server: 10.1.40-MariaDB
+-- Versi PHP: 7.3.5
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -25,7 +25,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_akun`
+-- Struktur dari tabel `tb_akun`
 --
 
 CREATE TABLE `tb_akun` (
@@ -39,20 +39,24 @@ CREATE TABLE `tb_akun` (
   `jenis_kelamin` varchar(50) NOT NULL,
   `status` varchar(50) NOT NULL,
   `saldo` int(55) NOT NULL,
-  `Image` varchar(126) NOT NULL
+  `image` varchar(126) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `tb_akun`
+-- Dumping data untuk tabel `tb_akun`
 --
 
-INSERT INTO `tb_akun` (`id_akun`, `nama_lengkap`, `alamat`, `email`, `no_telpon`, `nama_pengguna`, `kata_sandi`, `jenis_kelamin`, `status`, `saldo`, `Image`) VALUES
-(18, 'Ekky Aulia Rahman', 'Jl. Danau Toba no. 22', 'ekkyrahmanx1@gmail.com', '082234827215', 'ekky', '123', 'Laki-Laki', 'Pengguna', 0, 'default.jpg');
+INSERT INTO `tb_akun` (`id_akun`, `nama_lengkap`, `alamat`, `email`, `no_telpon`, `nama_pengguna`, `kata_sandi`, `jenis_kelamin`, `status`, `saldo`, `image`) VALUES
+(18, 'Ekky Aulia Rahman', 'Jl. Danau Toba no. 22 Link Panji', 'ekkyrahmanx1@gmail.com', '082234827214', 'ekky', '123', 'Laki-Laki', 'Pengguna', 0, 'P_20181021_161905_BF_(edit).jpg'),
+(19, 'Putri Rachmawati', 'Rambi Jember', 'putrirach33@gmail.com', '082234827216', 'putri', '123', 'Perempuan', 'Kurir', 0, 'default.png'),
+(20, 'Septiyan Yuliono', 'Indonesia, Jawa Timur, Kabupaten Lumajang, Jatiroto B50', 'septiyan333@gmail.com', '082234827217', 'iyan', '123', 'Laki-Laki', 'Admin', 0, 'default.png'),
+(21, 'Aidatul Fakhirah', 'Jember', 'Aidatul123@gmail.com', '082234827218', 'aida', '123', 'Perempuan', 'Pengguna', 0, 'default.png'),
+(22, 'Desy Wahyuningtyas', 'Lumajang', 'deasywahyuningtyas@gmail.com', '081234567890', 'desy', '12345', 'Perempuan', 'Pengguna', 0, 'default.png');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_jadwal`
+-- Struktur dari tabel `tb_jadwal`
 --
 
 CREATE TABLE `tb_jadwal` (
@@ -64,7 +68,7 @@ CREATE TABLE `tb_jadwal` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `tb_jadwal`
+-- Dumping data untuk tabel `tb_jadwal`
 --
 
 INSERT INTO `tb_jadwal` (`id_jadwal`, `id_akun`, `tanggal`, `daerah`, `waktu`) VALUES
@@ -73,7 +77,7 @@ INSERT INTO `tb_jadwal` (`id_jadwal`, `id_akun`, `tanggal`, `daerah`, `waktu`) V
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_paket_data`
+-- Struktur dari tabel `tb_paket_data`
 --
 
 CREATE TABLE `tb_paket_data` (
@@ -84,7 +88,7 @@ CREATE TABLE `tb_paket_data` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `tb_paket_data`
+-- Dumping data untuk tabel `tb_paket_data`
 --
 
 INSERT INTO `tb_paket_data` (`id_paket_data`, `jenis_paket_data`, `kuota`, `jumlah_tukar`) VALUES
@@ -95,7 +99,7 @@ INSERT INTO `tb_paket_data` (`id_paket_data`, `jenis_paket_data`, `kuota`, `juml
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_point`
+-- Struktur dari tabel `tb_point`
 --
 
 CREATE TABLE `tb_point` (
@@ -106,7 +110,7 @@ CREATE TABLE `tb_point` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `tb_point`
+-- Dumping data untuk tabel `tb_point`
 --
 
 INSERT INTO `tb_point` (`id_point`, `id_akun`, `point`, `jumlah`) VALUES
@@ -115,7 +119,7 @@ INSERT INTO `tb_point` (`id_point`, `id_akun`, `point`, `jumlah`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_pointukar`
+-- Struktur dari tabel `tb_pointukar`
 --
 
 CREATE TABLE `tb_pointukar` (
@@ -126,7 +130,7 @@ CREATE TABLE `tb_pointukar` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `tb_pointukar`
+-- Dumping data untuk tabel `tb_pointukar`
 --
 
 INSERT INTO `tb_pointukar` (`id_point_tukar`, `id_akun`, `tanggal`, `tukar`) VALUES
@@ -144,7 +148,7 @@ INSERT INTO `tb_pointukar` (`id_point_tukar`, `id_akun`, `tanggal`, `tukar`) VAL
 (53, 0, '2020-01-13', 5000);
 
 --
--- Triggers `tb_pointukar`
+-- Trigger `tb_pointukar`
 --
 DELIMITER $$
 CREATE TRIGGER `updatepoint` AFTER INSERT ON `tb_pointukar` FOR EACH ROW BEGIN
@@ -156,7 +160,7 @@ DELIMITER ;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_tambah_point`
+-- Struktur dari tabel `tb_tambah_point`
 --
 
 CREATE TABLE `tb_tambah_point` (
@@ -169,7 +173,7 @@ CREATE TABLE `tb_tambah_point` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_transaksi`
+-- Struktur dari tabel `tb_transaksi`
 --
 
 CREATE TABLE `tb_transaksi` (
@@ -187,7 +191,7 @@ CREATE TABLE `tb_transaksi` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `tb_transaksi`
+-- Dumping data untuk tabel `tb_transaksi`
 --
 
 INSERT INTO `tb_transaksi` (`id_transaksi`, `id_akun`, `nama_lengkap`, `tanggal`, `waktu`, `jenis_sampah`, `berat`, `saldo`, `no_telpon`, `alamat`, `detail`) VALUES
@@ -196,7 +200,7 @@ INSERT INTO `tb_transaksi` (`id_transaksi`, `id_akun`, `nama_lengkap`, `tanggal`
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_tukar`
+-- Struktur dari tabel `tb_tukar`
 --
 
 CREATE TABLE `tb_tukar` (
@@ -206,7 +210,7 @@ CREATE TABLE `tb_tukar` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `tb_tukar`
+-- Dumping data untuk tabel `tb_tukar`
 --
 
 INSERT INTO `tb_tukar` (`id_point`, `ditukar`, `status`) VALUES
@@ -219,104 +223,104 @@ INSERT INTO `tb_tukar` (`id_point`, `ditukar`, `status`) VALUES
 --
 
 --
--- Indexes for table `tb_akun`
+-- Indeks untuk tabel `tb_akun`
 --
 ALTER TABLE `tb_akun`
   ADD PRIMARY KEY (`id_akun`);
 
 --
--- Indexes for table `tb_jadwal`
+-- Indeks untuk tabel `tb_jadwal`
 --
 ALTER TABLE `tb_jadwal`
   ADD PRIMARY KEY (`id_jadwal`),
   ADD UNIQUE KEY `id_akun` (`id_akun`);
 
 --
--- Indexes for table `tb_paket_data`
+-- Indeks untuk tabel `tb_paket_data`
 --
 ALTER TABLE `tb_paket_data`
   ADD PRIMARY KEY (`id_paket_data`);
 
 --
--- Indexes for table `tb_point`
+-- Indeks untuk tabel `tb_point`
 --
 ALTER TABLE `tb_point`
   ADD PRIMARY KEY (`id_point`),
   ADD UNIQUE KEY `id_akun` (`id_akun`);
 
 --
--- Indexes for table `tb_pointukar`
+-- Indeks untuk tabel `tb_pointukar`
 --
 ALTER TABLE `tb_pointukar`
   ADD PRIMARY KEY (`id_point_tukar`);
 
 --
--- Indexes for table `tb_tambah_point`
+-- Indeks untuk tabel `tb_tambah_point`
 --
 ALTER TABLE `tb_tambah_point`
   ADD PRIMARY KEY (`id_tambah_point`);
 
 --
--- Indexes for table `tb_transaksi`
+-- Indeks untuk tabel `tb_transaksi`
 --
 ALTER TABLE `tb_transaksi`
   ADD PRIMARY KEY (`id_transaksi`),
   ADD KEY `id_akun` (`id_akun`) USING BTREE;
 
 --
--- Indexes for table `tb_tukar`
+-- Indeks untuk tabel `tb_tukar`
 --
 ALTER TABLE `tb_tukar`
   ADD PRIMARY KEY (`id_point`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
 --
--- AUTO_INCREMENT for table `tb_akun`
+-- AUTO_INCREMENT untuk tabel `tb_akun`
 --
 ALTER TABLE `tb_akun`
-  MODIFY `id_akun` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id_akun` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
--- AUTO_INCREMENT for table `tb_jadwal`
+-- AUTO_INCREMENT untuk tabel `tb_jadwal`
 --
 ALTER TABLE `tb_jadwal`
   MODIFY `id_jadwal` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `tb_paket_data`
+-- AUTO_INCREMENT untuk tabel `tb_paket_data`
 --
 ALTER TABLE `tb_paket_data`
   MODIFY `id_paket_data` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT for table `tb_point`
+-- AUTO_INCREMENT untuk tabel `tb_point`
 --
 ALTER TABLE `tb_point`
   MODIFY `id_point` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT for table `tb_pointukar`
+-- AUTO_INCREMENT untuk tabel `tb_pointukar`
 --
 ALTER TABLE `tb_pointukar`
   MODIFY `id_point_tukar` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=54;
 
 --
--- AUTO_INCREMENT for table `tb_tambah_point`
+-- AUTO_INCREMENT untuk tabel `tb_tambah_point`
 --
 ALTER TABLE `tb_tambah_point`
   MODIFY `id_tambah_point` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `tb_transaksi`
+-- AUTO_INCREMENT untuk tabel `tb_transaksi`
 --
 ALTER TABLE `tb_transaksi`
   MODIFY `id_transaksi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=58;
 
 --
--- AUTO_INCREMENT for table `tb_tukar`
+-- AUTO_INCREMENT untuk tabel `tb_tukar`
 --
 ALTER TABLE `tb_tukar`
   MODIFY `id_point` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
