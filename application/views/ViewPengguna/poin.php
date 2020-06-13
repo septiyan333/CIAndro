@@ -70,7 +70,7 @@
             </span>
             <hr>
             <a href="<?= base_url('Pengguna/tukar_poin'); ?>" class="card-link"> <img src="<?php echo base_url('assets/img/icons/ic_money.png'); ?>" alt="icon-tukar-poin"> Tukar Poin</a>
-            <a href="<?php echo base_url('Pengguna/poin'); ?>" class="float-right">Lihat Riwayat Poin</a>
+            <a href="<?php echo base_url('Pengguna/riwayat'); ?>" class="float-right">Lihat Riwayat Poin</a>
           </div>
         </div>
 

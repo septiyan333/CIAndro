@@ -55,7 +55,6 @@
     <!-- TOP TABS -->
     <div class="btn-group">
           <a href="#" class="btn btn-primary" role="button">Pulsa</a>
-          <a href="#" class="btn btn-info" role="button">Paket Data</a>
     </div>
         <!-- FIRST TAB -->
         <div class="tab-pane active" id="tab1">

@@ -55,76 +55,65 @@
       <!-- TOP TABS -->
       <div class="btn-group">
 
-        <a href="tukarpoin.php?p=pakdat" class="btn btn-primary" role="button">Paket Data</a>
+       <a href="#" class="btn btn-primary" role="button">Pulsa</a>
       </div>
 
-      <tr>
+      <!-- FIRST TAB -->
+        <div class="tab-pane active" id="tab1">
+          <div class="container-fluid">
+            <hr>
 
-        <td>
-          <h4>POINT SAYA</h4>
-        </td>
-        <td style="width:250px;"></td>
-        <?php
-        include 'koneksi.php';
-        $result = mysqli_query($koneksi, "SELECT * FROM tb_point ORDER BY id_point");
-        if (mysqli_num_rows($result) > 0) {
-          while ($data = mysqli_fetch_array($result)) {
-        ?>
-            <td><?php echo $data['point'] ?></td> <br>
-            <!-- <td name="TGL">Tanggal</td> -->
-            <td><label for="TGL" name="TGL"><?php echo date("Y-m-d"); ?></label></td>
-        <?php    }
-        } ?><br>
-        <!-- <td class="point"><input type="text" value="<?= $po[0]['point']; ?>"></td> -->
-        <label name="ID" id="ID"><?= $po[0]['id_akun']; ?></label>
-      </tr>
-      <tr>
+             <table class="table" border="px">
 
-      </tr>
-      <div class="container">
-        <h2 align="center">Tukar Point</h2>
-        <div class="row" id="load_data">
-
-          <?php
-          include 'koneksi.php';
-          $query = mysqli_query($koneksi, "SELECT * FROM tb_paket_data ORDER BY id_paket_data ASC");
-          if (mysqli_num_rows($query) > 0) {
-            while ($data = mysqli_fetch_array($query)) {
-          ?>
-              <!-- // $query1 = $conn->prepare($query);
-        // $query1->execute();
-        // $res1 = $query1->get_result();
-        // while ($row = $res1->fetch_assoc()) {
-        //   $id = $row["id_paket_data"];
-        //   $jenis_data = $row["jenis_paket_data"];
-        //   $kuota = $row["kuota"];
-        //   $harga = $row["jumlah_tukar"];
-        //   if (strlen($kuota) > 60) {
-        //     $kuota = substr($kuota, 0, 60) . '...';
-        //   } -->
-              <div class="col-sm-3 mb-3">
-                <div class="card">
-                  <div class="card-body">
-                    <h5 class="card-title"><?php echo $data['jenis_paket_data']; ?></h5>
-                    <h5 class="card-title"><?php echo $data['kuota']; ?>GB</h5>
-                  </div>
-                  <div class="card-footer">
-                    <input type="hidden" name="TGL" value="<?php echo date("Y-m-d"); ?>">
-                    <input type="hidden" name="ID" value="<?= $po[0]['id_akun']; ?>">
-                    <a href="proses_tukar.php?id_akun=<?php echo $data['id_akun'] ?>" type="submit"><input type="submit" name="harga" class="btn btn-info" value="<?php echo $data['jumlah_tukar']; ?>"></a>
-
-                  </div>
-                </div>
-              </div>
-          <?php
-            }
-          }
-          ?>
-
+          <tbody>
+            <tr class="btn-warning">
+            </tr>
+            <tr>
+              <td class="td-padding"><center>Pulsa OMG!<P><center>
+        <h2>15</h2> <h4>Rb</h4><p>
         </div>
-
-      </div>
-      <a href="Point.php" class="btn btn-warning" role="button">Kembali</a>
+          <div class="text-right buttons-wrapper pull-right">
+          <input type="submit" class="btn btn-primary" value="15.000 TP"></input>
+          </div></td>
+              <td class="td-padding"><center>Pulsa OMG!<P><center>
+        <h2>20</h2> <h4>Rb</h4> <p>
+        </div>
+          <div class="text-right buttons-wrapper pull-right">
+          <input type="submit" class="btn btn-primary" value="20.000 TP"></input>
+          </div> </td>
+            </tr>
+            <tr>
+              <td class="td-padding"><center>Pulsa OMG!<P><center>
+        <h2>50</h2> <h4>Rb</h4><p>
+        </div>
+          <div class="text-right buttons-wrapper pull-right">
+          <input type="submit" class="btn btn-primary" value="50.000 TP"></input>
+          </div></td>
+        <td class="td-padding"><center>Pulsa OMG!<P><center>
+        <h2>150</h2> <h4>Rb</h4><p>
+        </div>
+          <div class="text-right buttons-wrapper pull-right">
+          <input type="submit" class="btn btn-primary" value="150.000 TP"></input>
+          </div></td>
+            </tr>
+        <tr>
+        <td class="td-padding"><center>Pulsa OMG!<P><center>
+        <h2>100</h2> <h4>Rb</h4><p>
+        </div>
+          <div class="text-right buttons-wrapper pull-right">
+          <input type="submit" class="btn btn-primary" value="100.000 TP"></input>
+          </div></td>
+        <td class="td-padding"><center>Pulsa OMG! WOW! Special<P><center>
+        <h2>200</h2> <h4>Rb</h4><p>
+        </div>
+          <div class="text-right buttons-wrapper pull-right">
+          <input type="submit" class="btn btn-primary" value="200.000 TP"></input>
+          </div></td>
+        </tr>
+        <tr>
+        <body>
+        </table>
+        <hr>
 
     </div> <!-- end container-fluid -->
     </div> <!-- end tab-content -->
