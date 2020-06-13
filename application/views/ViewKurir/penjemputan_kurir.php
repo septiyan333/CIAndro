@@ -69,7 +69,7 @@
     </form>
     <div class="card mb-3">
       <div class="card-header">
-        <i class="fas fa-table"></i>Jadwal Jemput Sampah
+        <i class="fas fa-table"></i>Jadwal Penjemputan Sampah
       </div>
       <div class="card-body">
         <div class="table-responsive">
