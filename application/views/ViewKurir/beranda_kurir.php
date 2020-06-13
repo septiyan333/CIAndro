@@ -68,7 +68,7 @@
   <div class="container">
     <!-- Panel -->
     <div class="row justify-content-center">
-      <div class="col-8 info-panel">
+      <div class="col-6 info-panel">
         <div class="row isi">
           <div class="col-lg">
             <img src="<?php echo base_url('assets/img/icons/garbage, truck, transportation, transport, vehicle_120px.png') ?>" alt="penjemputan">
@@ -78,11 +78,6 @@
           <div class="col-lg">
             <img src="<?php echo base_url('assets/img/icons/bank, finance, dollar, location, pointer_120px.png') ?>" alt="Poin">
             <a class="nav-item btn btn-primary" href="<?php echo base_url('Kurir/poin'); ?>"><span>Poin</span></a>
-          </div>
-
-          <div class="col-lg">
-            <img src="<?php echo base_url('assets/img/icons/bookmark, schedule, date, appointment_120px.png') ?>" alt="Jadwal">
-            <a class="nav-item btn btn-primary" href="<?php echo base_url('Kurir/jadwal'); ?>"><span>Jadwal</span></a>
           </div>
 
           <div class="col-lg">

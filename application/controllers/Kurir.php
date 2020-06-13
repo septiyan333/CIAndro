@@ -37,11 +37,11 @@ class Kurir extends CI_Controller
         $this->load->view('ViewKurir/tukarpoin_kurir', $data);
     }
 
-    // ----------- Jadwal -----------
-    public function jadwal()
+    // ----------- Penjemputan -----------
+    public function penjemputan()
     {
         $data['akun'] = $this->db->get_where('tb_akun', ['nama_pengguna' => $this->session->userdata('nama_pengguna')])->row_array();
-        $this->load->view('ViewKurir/jadwal_kurir', $data);
+        $this->load->view('ViewKurir/penjemputan_kurir', $data);
     }
 
     // ----------- Riwayat -----------
