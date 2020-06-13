@@ -115,65 +115,6 @@
         <hr>
       <!-- end Tab1 content -->
 
-      <div class="tab-content">
-          <!-- FIRST TAB -->
-          <div class="tab-pane active" id="tab1">
-            <div class="container-fluid">
-              <hr>
-
-               <table class="table" border="px">
-
-            <tbody>
-              <tr class="btn-warning">
-              </tr>
-              <tr>
-                <td class="td-padding"><center>Internet OMG!<P><center>
-          5 gb<p>
-          </div>
-            <div class="text-right buttons-wrapper pull-right">
-            <input type="submit" class="btn btn-primary" value="35.000 TP"></input>
-            </div></td>
-                <td class="td-padding"><center>Internet OMG!<P><center>
-           2.5 gb<p>
-          </div>
-            <div class="text-right buttons-wrapper pull-right">
-            <input type="submit" class="btn btn-primary" value="20.000 TP"></input>
-            </div> </td>
-              </tr>
-              <tr>
-                <td class="td-padding"><center>Paket Internet<P><center>
-          500 Mb<p>
-          </div>
-            <div class="text-right buttons-wrapper pull-right">
-            <input type="submit" class="btn btn-primary" value="4000 TP"></input>
-            </div></td>
-          <td class="td-padding"><center>Paket Internet<P><center>
-          2.5 gb<p>
-          </div>
-            <div class="text-right buttons-wrapper pull-right">
-            <input type="submit" class="btn btn-primary" value="21.000 TP"></input>
-            </div></td>
-              </tr>
-          <tr>
-          <td class="td-padding"><center>Internet Combo<P><center>
-          10 gb<p>
-          </div>
-            <div class="text-right buttons-wrapper pull-right">
-            <input type="submit" class="btn btn-primary" value="67.000 TP"></input>
-            </div></td>
-          <td class="td-padding"><center>Paket Special<P><center>
-          3 gb<p>
-          </div>
-            <div class="text-right buttons-wrapper pull-right">
-            <input type="submit" class="btn btn-primary" value="5000 TP"></input>
-            </div></td>
-          </tr>
-          <tr>
-          <body>
-          </table>
-          <hr>
-        <!-- end Tab1 content -->';
-
 
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
