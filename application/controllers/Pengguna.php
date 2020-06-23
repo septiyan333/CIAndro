@@ -51,7 +51,7 @@ class Pengguna extends CI_Controller
                                                 </div>');
 
         //redirect
-        redirect('buku/');
+        redirect('pengguna/');
 
     }
 
