@@ -27,7 +27,7 @@
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light">
       <div class="container">
-        <a class="navbar-brand" href="#"><?php echo 'Selamat datang, ' . $akun['nama_lengkap']; ?></a>
+        <a class="navbar-brand" href="<?= base_url('Pengguna'); ?>"><?php echo 'Selamat datang, ' . $akun['nama_lengkap']; ?></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -38,12 +38,11 @@
             <!-- Navigasi Akun -->
             <div class="btn-group">
               <button type="button" class="btn dropdown-toggle btn-akun" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <img src="<?= base_url('assets/img/profile/default.png') ?>" alt="profil" class="img-circle" width="30px">
-                <?= $akun['nama_pengguna']; ?>
+                <img src="<?= base_url('assets/img/profile/') . $akun['image'] ?>" alt="profil" class="img-profile rounded-circle" width="30px" height="30px">&nbsp <?= $akun['nama_pengguna']; ?>
               </button>
               <div class="dropdown-menu">
                 <a class="dropdown-item" href="<?php echo base_url('Pengguna/profil'); ?>">Profil</a>
-                <a class="dropdown-item" href="<?php echo base_url('Pengguna/poin'); ?>">Tukar Poin</a>
+                <a class="dropdown-item" href="<?php echo base_url('Pengguna/tukar_poin'); ?>">Tukar Poin</a>
                 <a class="dropdown-item" href="#">Pengaturan</a>
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="<?php echo base_url('Halaman_Awal/keluar'); ?>">Keluar</a>
@@ -88,7 +87,7 @@
 
             <div class="col-lg">
               <img src="<?php echo base_url('assets/img/icons/employee, account, business, time, clock_120px.png') ?>" alt="riwayat">
-              <a class="nav-item btn btn-primary" href="<?php echo base_url('Pengguna/riwayat');?>"><span>Riwayat</span></a>
+              <a class="nav-item btn btn-primary" href="<?php echo base_url('Pengguna/riwayat'); ?>"><span>Riwayat</span></a>
             </div>
           </div>
         </div>
